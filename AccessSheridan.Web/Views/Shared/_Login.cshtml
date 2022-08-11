@@ -1,0 +1,27 @@
+@model AccessSheridan.Web.Data.Models.User.LoginModel
+
+<form id="loginForm" method="POST" action='@Url.Action("Login", "Home")' class="log-form">
+    <input asp-for="Email" id="name" class="form-control" placeholder="Username" required data-error="Please enter your user name" />
+    <span asp-validation-for="Email" class="text-danger"></span>
+
+    <input asp-for="Password" id="password" class="form-control" placeholder="Password" required data-error="Please enter password" />
+    <span asp-validation-for="Password" class="text-danger"></span>
+
+
+    <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+        <button type="submit" id="submit" class="slide-btn login-btn">Login</button>
+        <div id="msgSubmit" class="h3 text-center hidden"></div>
+    </div>
+    <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+        <a href="#">Forgot password?</a>
+    </div>
+    <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+        
+        <div class="acc-not">
+            Don't have an account
+            <a href="#" data-toggle="modal" data-target="#loginModal" class="acc-not">Sign up now :-)</a>
+        </div>
+
+    </div>
+</form>
+

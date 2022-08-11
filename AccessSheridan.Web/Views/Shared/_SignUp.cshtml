@@ -1,0 +1,67 @@
+@model AccessSheridan.Web.Data.Models.User.RegisterModel
+
+<form id="registerSubmit" method="POST" action="@Url.Action("GetRegistration", "Home")" class="log-form">
+    @*<div class="form-group">
+        <label asp-for="ProgramsId" class="control-label"></label>
+        <select asp-for="ProgramsId" class="form-control" asp-items="ViewBag.ProgramsId"></select>
+    </div>*@
+    <div class="col-md-12 col-sm-12 col-xs-12 form-group">
+        <label for="FirstName" class="col-form-label">First Name:</label>
+        <input asp-for="FirstName" id="regFirstName" class="form-control" placeholder="First name" required data-error="Please enter your first name" />
+        <span asp-validation-for="FirstName" class="text-danger"></span>
+    </div>
+    <div class="col-md-12 col-sm-12 col-xs-12 form-group">
+        <label for="LastName" class="col-form-label">Last Name:</label>
+        <input asp-for="LastName" id="regLastName" class="form-control" placeholder="Last name" required data-error="Please enter your last name" />
+        <span asp-validation-for="LastName" class="text-danger"></span>
+    </div>
+    <div class="col-md-12 col-sm-12 col-xs-12 form-group">
+        <label for="Email" class="col-form-label">Email:</label>
+        <input asp-for="Email" id="regEmail" class="form-control" placeholder="Enter your email" required data-error="Please enter your email" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+    <div class="col-md-12 col-sm-12 col-xs-12 form-group">
+        <label for="Mobile" class="col-form-label">Phone Number:</label>
+        <input asp-for="Mobile" id="regMobile" class="form-control" placeholder="Phone Number" required data-error="Please enter your Phone number" />
+        <span asp-validation-for="Mobile" class="text-danger"></span>
+    </div>
+    <div class="col-md-12 col-sm-12 col-xs-12 form-group">
+        <label for="Username" class="col-form-label">Username:</label>
+        <input asp-for="Username" id="regUsername" class="form-control" placeholder="Username" required data-error="Please enter your Username" />
+        <span asp-validation-for="Username" class="text-danger"></span>
+    </div>
+    <div class="col-md-12 col-sm-12 col-xs-12 form-group">
+        <label for="password" class="col-form-label">Password:</label>
+        <input type="password" asp-for="Password" id="regPassword" class="form-control" placeholder="Password" required data-error="Please enter your Password" />
+        <span asp-validation-for="Password" class="text-danger"></span>
+    </div>
+    <div class="col-md-12 col-sm-12 col-xs-12 form-group">
+        <label for="ConfirmPassword" class="col-form-label">Password:</label>
+        <input type="password" asp-for="ConfirmPassword" id="regConfirmPassword" class="form-control" placeholder="Password" required data-error="Please enter your Password" />
+        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+    </div>
+    <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+        <div class="check-group flexbox">
+            <label class="check-box">
+                <input type="checkbox" class="check-box-input" checked>
+                <span class="remember-text">I agree to the terms & conditions</span>
+            </label>
+        </div>
+    </div>
+    <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+        <button type="submit" id="submitRegistration" class="slide-btn login-btn">Signup</button>
+        <div id="msgSubmit" class="h3 text-center hidden"></div>
+        <div class="clearfix"></div>
+    </div>
+    
+    <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+       
+
+        <div class="acc-not">
+            Have an account?
+            <a href="#" data-toggle="modal" data-target="#loginModal" class="acc-not">Login</a>
+        </div>
+    </div>
+
+</form>
+
