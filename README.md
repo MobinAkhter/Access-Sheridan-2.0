@@ -1,4 +1,4 @@
-# Access-Sheridan-2.0
+# Access-Sheridan-2.0 (Full Stack Web Application)
 
 # Features of the web application:
 
